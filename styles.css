@@ -1,20 +1,30 @@
 /* Root Variables */
 :root {
-    --primary-color: #2563eb;
-    --secondary-color: #8b5cf6;
-    --accent-color: #ec4899;
-    --text-dark: #1f2937;
-    --text-light: #6b7280;
-    --bg-light: #f9fafb;
+    /* Professional Color Palette */
+    --primary-color: #1E88E5;        /* Sky Blue - buttons, highlights, accents */
+    --charcoal: #2E2E2E;             /* Charcoal - headers, primary text */
+    --blue-gray: #ECEFF1;            /* Blue Gray - backgrounds */
+    --silver: #B0BEC5;               /* Silver - borders, dividers */
+
+    /* Text Colors */
+    --text-dark: #2E2E2E;
+    --text-light: #5E6C7A;
+
+    /* Background Colors */
+    --bg-light: #ECEFF1;
     --bg-white: #ffffff;
-    --border-color: #e5e7eb;
-    --gradient-primary: linear-gradient(135deg, #2563eb 0%, #8b5cf6 100%);
-    --gradient-hero: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    --gradient-accent: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+
+    /* UI Elements */
+    --border-color: #B0BEC5;
+    --gradient-primary: linear-gradient(135deg, #1E88E5 0%, #1565C0 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgba(46, 46, 46, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(46, 46, 46, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(46, 46, 46, 0.1);
+    --shadow-xl: 0 20px 25px -5px rgba(46, 46, 46, 0.1);
+
+    /* Transitions */
     --transition: all 0.3s ease;
 }
 
@@ -94,10 +104,7 @@ p {
 .nav-brand {
     font-size: 1.5rem;
     font-weight: 700;
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--charcoal);
 }
 
 .nav-menu {
@@ -121,7 +128,7 @@ p {
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--gradient-primary);
+    background: var(--primary-color);
     transition: width 0.3s ease;
 }
 
@@ -163,8 +170,7 @@ p {
     left: 0;
     right: 0;
     bottom: 0;
-    background: var(--gradient-hero);
-    opacity: 0.1;
+    background: linear-gradient(135deg, var(--blue-gray) 0%, var(--bg-white) 100%);
     z-index: -1;
 }
 
@@ -177,10 +183,7 @@ p {
 .hero-title {
     font-size: 4rem;
     margin-bottom: 1rem;
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--charcoal);
 }
 
 .hero-subtitle {
@@ -256,7 +259,7 @@ section {
     display: block;
     width: 80px;
     height: 4px;
-    background: var(--gradient-primary);
+    background: var(--primary-color);
     margin: 1rem auto 0;
     border-radius: 2px;
 }
@@ -313,10 +316,7 @@ section {
     padding: 2.5rem;
     border-radius: 0.5rem;
     box-shadow: var(--shadow-sm);
-    border-left: 4px solid transparent;
-    background-image: linear-gradient(white, white), var(--gradient-primary);
-    background-origin: border-box;
-    background-clip: padding-box, border-box;
+    border-left: 4px solid var(--primary-color);
     transition: var(--transition);
 }
 
@@ -374,10 +374,7 @@ section {
     border-radius: 1rem;
     box-shadow: var(--shadow-md);
     margin-bottom: 2rem;
-    border-left: 4px solid transparent;
-    background-image: linear-gradient(white, white), var(--gradient-primary);
-    background-origin: border-box;
-    background-clip: padding-box, border-box;
+    border-left: 4px solid var(--primary-color);
     transition: var(--transition);
 }
 
@@ -469,7 +466,7 @@ section {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.1);
 }
 
 .contact-links {
@@ -493,7 +490,7 @@ section {
 }
 
 .contact-link:hover {
-    background: var(--gradient-primary);
+    background: var(--primary-color);
     color: white;
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
