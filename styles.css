@@ -267,8 +267,29 @@ section {
 }
 
 .about-content {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.about-image {
+    position: relative;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-lg);
+    transition: var(--transition);
+}
+
+.about-image img:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-xl);
 }
 
 .about-text p {
@@ -538,6 +559,16 @@ section {
 
     .experience-header {
         flex-direction: column;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .about-image {
+        max-width: 300px;
+        margin: 0 auto;
     }
 
     .container {
