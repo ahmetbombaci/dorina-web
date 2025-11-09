@@ -300,40 +300,62 @@ section {
 }
 
 /* Expertise Section */
-.expertise-grid {
+.expertise-layout {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
+    gap: 3rem;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-.expertise-card {
+.expertise-category {
     background: white;
-    padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: var(--shadow-md);
+    padding: 2.5rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow-sm);
+    border-left: 4px solid transparent;
+    background-image: linear-gradient(white, white), var(--gradient-primary);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
     transition: var(--transition);
-    text-align: center;
 }
 
-.expertise-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-xl);
+.expertise-category:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
 }
 
-.expertise-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.expertise-card h3 {
+.category-title {
+    font-size: 1.5rem;
+    font-weight: 600;
     color: var(--text-dark);
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--border-color);
 }
 
-.expertise-card p {
+.expertise-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.expertise-list li {
     color: var(--text-light);
-    margin-bottom: 0;
+    font-size: 1rem;
+    line-height: 1.8;
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.expertise-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.2rem;
 }
 
 /* Experience Section */
@@ -553,7 +575,7 @@ section {
         font-size: 2rem;
     }
 
-    .expertise-grid {
+    .expertise-layout {
         grid-template-columns: 1fr;
     }
 
